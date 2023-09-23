@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.onload = function () {
+        let sum = 0;
+        let input;
+        let counter = 0;
+
+        do {
+          input = parseFloat(prompt(`Enter value ${counter + 1} (0 to stop):`));
+
+          if (!isNaN(input)) {
+            sum += input;
+            counter++;
+          } else {
+            alert("Invalid input. Please enter a numeric value.");
+          }
+
+          if (sum > 100) {
+            alert("Sum exceeded 100. Stopping input.");
+            break;
+          }
+        } while (input !== 0);
+
+        alert(`Total sum of entered values: ${sum}`);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
